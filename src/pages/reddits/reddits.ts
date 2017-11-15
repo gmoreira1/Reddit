@@ -28,7 +28,7 @@ export class RedditsPage {
   }
 
     ngOnInit(){
-      //console.log('working');
+      
       this.getPosts(this.category, this.limit);
     }
 
@@ -48,8 +48,10 @@ export class RedditsPage {
 
     getPosts(category, limit){
       this.redditService.getPosts(category, limit).subscribe(response => {
-        //console.log(response);
+
         this.items = response.data.children;
+
+
       });
     }
 

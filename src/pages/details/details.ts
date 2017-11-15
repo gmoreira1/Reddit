@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, Directive } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-
 
 @Component({
   selector: '',
@@ -8,8 +7,10 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class DetailsPage {
   item: any;
-  constructor(public navCtrl: NavController, public params: NavParams) {
-    this.item = params.get('item');
-  }
 
+
+  constructor(public navCtrl: NavController, public params: NavParams/*, private redditService: RedditService*/) {
+    this.item = params.get('item');
+
+    }
 }

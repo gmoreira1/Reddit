@@ -18,6 +18,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
+import { LazyLoadImageModule } from 'ng-lazyload-image';
+
 export const firebaseConfig = {
     apiKey: "AIzaSyDSjtPxxO3POTyXFMiYhtGIPRxMH_93B3U",
     authDomain: "test-2c237.firebaseapp.com",
@@ -45,7 +47,8 @@ export const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    LazyLoadImageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
